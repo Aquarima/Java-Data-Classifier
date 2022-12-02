@@ -1,0 +1,23 @@
+package fr.gph3.classifier.models.columns;
+
+public class NullColumn extends INormalizableColumn {
+
+    public NullColumn() {
+        super("Null Column", null);
+    }
+
+    @Override
+    public double getNormalizedValue(Object value) {
+        return 0;
+    }
+
+    @Override
+    public Object getDenormalizedValue(double value) {
+        return 0;
+    }
+
+    @Override
+    public boolean isNormalizable() {
+        return false;
+    }
+}
